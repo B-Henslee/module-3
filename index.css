@@ -1,15 +1,33 @@
 body {
-    background-color: #252526;
+    background-color: #131313;
+    color: rgb(161, 161, 170);
+    font-size: 1.25rem;
+    width: 100vw;
 }
-header{
+.background{
+    width: 100vw;
+    height: 55rem;
+    background-image: radial-gradient(80% 50% at 50% 0%,rgba(70, 130, 180, 0.5),hsla(0,0%,100%,0));
+}
+.shine {
+    color: rgb(161, 161, 170); /* Initial color */
+    animation: shine 7.5s ease-in-out infinite alternate;
+}
+
+@keyframes shine {
+    from { color: rgb(161, 161, 170); }
+    to { color: white; }
+}  
+.container{
+    max-width: 80rem;
+    margin-inline: auto;
+}
+.header{
   display: flex;
   flex-direction: column;
   max-width: 80rem;  
-  min-height: 55rem;
   margin-inline: auto;
-  color: rgb(161 161 170);
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  border: 1px solid red;
 }
 nav, a{
     display: flex;
@@ -51,4 +69,13 @@ a:hover{
     padding: .6rem;
     color: white;
     margin-top: 2.2rem;
+}
+button:active{
+    transform: scale(1.2);
+}
+.main-content{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3rem;
 }
